@@ -1,0 +1,15 @@
+<div class="jumbotron text-center">
+    <h1>Apartment Website</h1>
+</div>
+
+
+
+
+<div ng-repeat="home in homes" class="jumbotron">
+    <img src="{{ home.image }}" height="300" width="600"></img>
+      <a ng-click="deleteHome(home._id)" class="btn btn-primary">Delete</a>
+</div>
+
+
+<input type="file" id="file" name="file"/>
+<button ng-click="add()">Add</button>

@@ -1,0 +1,68 @@
+<div class="jumbotron text-center">
+    <h1>{{ title }}</h1>
+
+</div>
+
+
+<div ng-repeat="contact in contacts">
+    <div style="width: 100%; overflow: hidden;" class="jumbotron">
+      <p style="text-align: center;font-size:2em;">Apartment Name</p>
+      <p style="text-align: center;font-size:1.75em;">{{ contact.address }}</p>
+        <div style="width: 600px; float: left;">
+            <p>Email: {{ contact.email }}</p>
+            <p>Phone: {{ contact.number }}</p>
+            <p>Emergency Number: {{ contact.emergencyNumber }}</p>
+        </div>
+        <div style="margin-left: 620px;">
+          <h4>Office Hours</h4>
+          <div ng-repeat="officeHour in contact.officeHours">
+            {{ officeHour }}
+            <br>
+          </div>
+        </div>
+        <a ng-click="deleteContact(contact._id)" class="btn btn-primary">Delete</a>
+    </div>
+    <br><br><br>
+</div>
+
+
+
+<br><br>
+
+<form class="form-horizontal" ng-submit="saveContact()">
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Address</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="contactData.address">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Number</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="contactData.number">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Emergency Number</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="contactData.emergencyNumber">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="contactData.email">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Office Hours</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="contactData.officeHours">
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+          <button type="submit" class="btn btn-success btn-lg btn-block">Add Contact</button>
+      </div>
+  </div>
+</form>

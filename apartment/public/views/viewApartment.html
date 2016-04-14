@@ -1,0 +1,18 @@
+<div class="jumbotron text-center">
+    <h1>{{ apartments.name }}</h1>
+    <h3>Price: ${{ apartments.price }} &nbsp;&nbsp;&nbsp; {{ apartments.sqfeet }} sq ft</h3>
+</div>
+
+
+<div style="font-size:1.5em;">
+  {{ apartments.description }}
+</div>
+
+<br><br>
+
+<ul ng-repeat="detail in apartments.details track by $index">
+    <li style="font-size:3em; color:green;" class="glyphicon glyphicon-ok"></li>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="font-size:2em; color:black;">{{ detail }}</span>
+</ul>
+<br><br><br>

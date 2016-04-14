@@ -1,0 +1,56 @@
+<!-- public/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Apartment Web Page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-animate.js"></script>
+
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/controllers/mainCtrl.js"></script>
+    <script src="js/controllers/apartmentCtrl.js"></script>
+    <script src="js/controllers/amenityCtrl.js"></script>
+    <script src="js/controllers/contactCtrl.js"></script>
+    <script src="js/services/apartmentService.js"></script>
+    <script src="js/services/amenityService.js"></script>
+    <script src="js/services/contactService.js"></script>
+    <script src="js/services/homeService.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="apartmentApp" ng-controller="apartmentController">
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Apartment Website</a>
+          </div>
+          <ul class="nav navbar-nav navbar-center">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/apartments">Floor Plans</a></li>
+            <li><a href="/amenities">Amenities</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+<br><br>
+    <!-- ANGULAR DYNAMIC CONTENT -->
+    <div ng-view></div>
+
+</div>
+</body>
+</html>

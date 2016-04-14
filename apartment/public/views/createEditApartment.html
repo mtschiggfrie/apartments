@@ -1,0 +1,52 @@
+<br><br>
+<div class="page-header">
+    <h1 ng-if="type == 'create'">Create Apartment</h1>
+    <h1 ng-if="type == 'edit'">Edit Apartment</h1>
+</div>
+
+<form class="form-horizontal" ng-submit="saveApartment()">
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Name</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="apartmentData.name">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Price</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="apartmentData.price">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Description</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="apartmentData.description">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Details</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="apartmentData.details">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Square Feet</label>
+      <div class="col-sm-6">
+          <input type="text" class="form-control" ng-model="apartmentData.sqfeet">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Image</label>
+      <div class="col-sm-6">
+          <input type="file" class="form-control" ng-model="apartmentData.image" id="file">
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+          <button type="submit" onclick="location.href='/apartments'" class="btn btn-success btn-lg btn-block" ng-if="type == 'create'">Create Apartment</button>
+          <button type="submit" class="btn btn-success btn-lg btn-block" ng-if="type == 'edit'">Edit Apartment</button>
+      </div>
+  </div>
+</form>
+
+{{ data }}

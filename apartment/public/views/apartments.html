@@ -1,0 +1,28 @@
+<div class="jumbotron text-center">
+    <h1>List of Floorplans</h1>
+</div>
+
+<div class="page-header">
+    <h1>Apartments <a href="/apartments/create" class="btn btn-default">
+        <span class="glyphicon glyphicon-plus"></span>
+        New apartment</a>
+    </h1>
+</div>
+
+
+<div ng-repeat="apartment in apartments">
+    <div style="width: 100%; overflow: hidden;" class="jumbotron">
+      <p style="text-align: center;font-size:3em;"><a ng-href="/apartments/view/{{ apartment._id }}">{{ apartment.name }}</a></p>
+        <div style="width: 600px; float: left;">
+            <p>Price: ${{apartment.price }}</p>
+            <p>{{ apartment.sqfeet }} sq ft</p>
+            <p>{{ apartment.description }}</p>
+        </div>
+        <div style="margin-left: 620px;">
+            <img src="https://oxfordmanor.org/wp-content/uploads/sites/37/2015/02/om_Manchester-3D-prepped-150x150.jpg"></img>
+        </div>
+    </div>
+    <a ng-click="deleteApartment(apartment._id)" class="btn btn-primary">Delete</a>
+    <a ng-href="/apartments/{{ apartment._id }}" class="btn btn-primary">Edit</a>
+    <br><br><br>
+</div>

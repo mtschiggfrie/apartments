@@ -1,0 +1,19 @@
+{
+  "name": "apartment",
+  "version": "0.0.0",
+  "description": "apartment website",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "passport": "^0.3.2",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.6",
+    "body-parser": "^1.14.2",
+    "bcrypt-nodejs": "0.0.3",
+    "morgan": "^1.6.1",
+    "angular": "1.4.x",
+    "angular-route": "1.4.x",
+    "angular-animate": "^1.4.9"
+  }
+}
